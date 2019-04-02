@@ -11,7 +11,17 @@ def linear_search(data, value):
     return None
 
 
-def binary_search(v):
-    # Реализуйте алгоритм здесь
-    pass
+def binary_search(data, value):
+    l=0
+    h=len(data)-1
+    while l<=h:
+        m=(h+l)//2
+        v=data[m]
+        if v==value:
+            return m
+        elif v<value:
+            l=m+1
+        else:
+            h=m-1
+    return None
 

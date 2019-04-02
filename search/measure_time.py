@@ -3,7 +3,7 @@
 
 from timeit import default_timer as timer
 from matplotlib import pyplot as plt
-from tqdm import tqdm
+import tqdm
 from statistics import mean
 import random
 from search import linear_search, binary_search
@@ -38,10 +38,13 @@ def measure_search_time(search_alg, sz, repeats):
 def main():
     sizes = []
     avg_time = []
+    avg_time2 = []
     for sz in tqdm(range(10, 50000, 1000)):
         sizes.append(sz)
         avg_time.append(measure_search_time(linear_search, sz, 500))
+        avg_time2.append(measure_search_time(binary_search, sz, 500))
     plt.plot(sizes, avg_time)
+    plt.plot(sizes, avg_time2)
     plt.show()
 
 

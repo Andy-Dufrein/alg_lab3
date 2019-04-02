@@ -23,7 +23,6 @@ class TestLinearSearch(unittest.TestCase):
         self.assertEqual(linear_search(self.data, 35), None)
 
 
-@unittest.skip("Not implemented")
 class TestBinarySearch(unittest.TestCase):
     def setUp(self):
         self.data = [1, 10, 20, 34, 56, 75, 78, 89, 100]
