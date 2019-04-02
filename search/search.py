@@ -11,7 +11,17 @@ def linear_search(data, value):
     return None
 
 
-def binary_search(v):
-    # Реализуйте алгоритм здесь
-    pass
+def binary_search(data, value):
+    low = 0
+    high = len(data)-1
+    while low <= high:
+        mid = (low+high)//2
+        guess = data[mid]
+        if guess == value:
+            return mid
+        elif guess <value:
+            low = mid+1
+        else: 
+            high = mid-1
+        
 
